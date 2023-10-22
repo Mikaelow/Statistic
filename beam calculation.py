@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 def loop_and_cheeck(a,b,x1,x2,j):
     if x1<=j<=x2:
-        new_y = np.round(a*j + b)
+        new_y = a*j + b
         return new_y
     else:
         pass
@@ -46,6 +46,9 @@ def coefficients_a_b(a_indicator,b_indicator,main_indicator):
 if __name__ == '__main__':
     x = np.array([0.3 , 0.6 , 0.8])
     y = np.array([0   ,  10 , 50])  
-    new_x = np.linspace(x[0],x[len(x)-1],20) 
+    new_x = np.linspace(x[0],x[len(x)-1],50) 
     y_f = lineal_conncection(x,y)
+    plt.plot(new_x,y_f,color = 'blue')
+    plt.plot(x,y, color='red')
+    plt.show()
     
