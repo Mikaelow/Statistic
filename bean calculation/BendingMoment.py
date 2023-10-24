@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-class Linealc_Connection:
+class BendingMoment:
     def __init__(self,x,y):
         self.x = x
         self.y = y
@@ -47,6 +47,7 @@ class Linealc_Connection:
 
     def draw_plot(self, x):
         y= self.conncection(x)
+        plt.subplot(4 , 1 , 1)
         plt.plot(x , y , color = 'blue') #MG main
         plt.title('Bending Moment')
         plt.xlabel('Length [mm]')
