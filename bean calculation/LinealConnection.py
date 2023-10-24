@@ -1,4 +1,5 @@
 import numpy as np
+import matplotlib.pyplot as plt
 
 class Linealc_Connection:
     def __init__(self,x,y):
@@ -11,7 +12,6 @@ class Linealc_Connection:
             return new_y
         else:
             pass
-
 
     def conncection(self, new_x):
         i = 1
@@ -31,7 +31,6 @@ class Linealc_Connection:
         y_f = y_f[y_f != None]
         return y_f
         
-
     def indicators(self, x1 , x2 , y1 , y2):
         main_matrix = np.array([[x1,1],[x2,1]])
         a_matrix = np.array([[y1,1],[y2,1]])
@@ -46,3 +45,13 @@ class Linealc_Connection:
         b = round(b_indicator/main_indicator,2)
         return a,b
 
+    def draw_plot(self, x):
+        y= self.conncection(x)
+        plt.plot(x , y , color = 'blue') #MG main
+        plt.title('Bending Moment')
+        plt.xlabel('Length [mm]')
+        plt.ylabel('Bending Moment [Nm]')
+        plt.show()
+    
+    
+#plt.scatter(x , MGy , color='red' , marker = 'o') #MG points
