@@ -11,8 +11,8 @@ class ReducedMoment:
         i = 0
         rm = np.array([])
         while i < len(self.t):
-            x = getattr(self, 'bm')[i]
-            y = getattr(self, 't')[i]
+            x = self.bm[i] 
+            y = self.t[i]
             y_f = math.sqrt(math.pow(x, 2) + 0.75 * math.pow(y, 2))
             rm = np.append(rm, y_f)
             i += 1 
