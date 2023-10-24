@@ -6,7 +6,7 @@ class Torque:
         self.x = x
         self.y = y
 
-    def lineal_connection(self, new_x):    
+    def torque_moment_function(self, new_x):    
         y_f = np.array([])
         i = 1
         while i < len(self.x):
@@ -23,6 +23,6 @@ class Torque:
         return y_f
 
     def draw_plot(self, x):
-        y_f = self.lineal_connection(x)
+        y_f = self.torque_moment_function(x)
         plt.plot(x,y_f)
         plt.show()

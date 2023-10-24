@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 class BendingMoment:
-    def __init__(self,x,y):
+    def __init__(self,x:np.array , y:np.array):
         self.x = x
         self.y = y
         
@@ -13,7 +13,7 @@ class BendingMoment:
         else:
             pass
 
-    def conncection(self, new_x):
+    def bending_moment_function(self, new_x) -> np.array:
         i = 1
         y_f = np.array([])
         while i < len(self.x):
@@ -46,7 +46,7 @@ class BendingMoment:
         return a,b
 
     def draw_plot(self, x):
-        y= self.conncection(x)
+        y= self.bending_moment_function(x)
         plt.subplot(4 , 1 , 1)
         plt.plot(x , y , color = 'blue') #MG main
         plt.title('Bending Moment')
