@@ -21,8 +21,3 @@ class Torque:
                     pass
             i += 1
         return y_f
-
-    def draw_plot(self, x):
-        y_f = self.torque_moment_function(x)
-        plt.plot(x,y_f)
-        plt.show()
