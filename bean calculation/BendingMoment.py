@@ -1,5 +1,4 @@
 import numpy as np
-import matplotlib.pyplot as plt
 
 class BendingMoment:
     def __init__(self,x:np.array , y:np.array):
@@ -45,14 +44,6 @@ class BendingMoment:
         b = round(b_indicator/main_indicator,2)
         return a,b
 
-    def draw_plot(self, x):
-        y= self.bending_moment_function(x)
-        plt.subplot(4 , 1 , 1)
-        plt.plot(x , y , color = 'blue') #MG main
-        plt.title('Bending Moment')
-        plt.xlabel('Length [mm]')
-        plt.ylabel('Bending Moment [Nm]')
-        plt.show()
     
     
 #plt.scatter(x , MGy , color='red' , marker = 'o') #MG points
