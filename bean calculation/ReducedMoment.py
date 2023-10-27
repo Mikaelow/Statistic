@@ -1,5 +1,6 @@
 import numpy as np
 import math 
+
 class ReducedMoment:
     # T torque
     # BM Bending Moment
